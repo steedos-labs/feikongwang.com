@@ -39,6 +39,9 @@ export default function RootLayout({
         lexend.variable,
       )}
     >
+      <head>
+        <link rel="icon" type="image/png" href="/logo.png"/>
+      </head>
       <body className="flex h-full flex-col">{children}</body>
     </html>
   )
