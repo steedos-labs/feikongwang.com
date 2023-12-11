@@ -20,8 +20,8 @@ interface Feature {
 
 const features: Array<Feature> = [
   {
-    name: 'Reporting',
-    summary: 'Stay on top of things with always up-to-date reporting features.',
+    name: '高度可定制的报销流程',
+    summary: '系统内置可视化的流程引擎，根据企业特定需求，定制化设置报销规则和流程，实现精细化管理。',
     description:
       'We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.',
     image: screenshotProfitLoss,
@@ -54,9 +54,9 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: 'Inventory',
+    name: '深入的数据洞察与可视化',
     summary:
-      'Never lose track of what’s in stock with accurate inventory tracking.',
+      '系统内置强大可视化数据分析工具，为用户提供深入的财务报告和洞察，帮助捕捉关键业务趋势。',
     description:
       'We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.',
     image: screenshotInventory,
@@ -82,9 +82,9 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: 'Contacts',
+    name: '轻松集成现有系统',
     summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
+      '系统内置可视化应用集成平台，轻松集成各类API，如财务、ERP系统，提高数据交换的效率和准确性。',
     description:
       'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
     image: screenshotContacts,
@@ -141,7 +141,7 @@ function Feature({
       <p className="mt-2 font-display text-xl text-slate-900">
         {feature.summary}
       </p>
-      <p className="mt-4 text-sm text-slate-600">{feature.description}</p>
+      {/* <p className="mt-4 text-sm text-slate-600">{feature.description}</p> */}
     </div>
   )
 }
@@ -234,7 +234,7 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Simplify everyday business tasks.
+            低代码驱动，轻松定制。
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
             Because you’d probably be a little confused if we suggested you

@@ -123,18 +123,16 @@ export function Pricing() {
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
               <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" />
-              <span className="relative">Simple pricing,</span>
+              <span className="relative">版本与报价</span>
             </span>{' '}
-            for everyone.
           </h2>
           <p className="mt-4 text-lg text-slate-400">
-            It doesn’t matter what size your business is, our software won’t
-            work well for you.
+          释放增长潜力，使用完全可定制的费控自动化软件。
           </p>
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
-            name="Starter"
+            name="入门版"
             price="$9"
             description="Good for anyone who is self-employed and just getting started."
             href="/register"
@@ -148,7 +146,7 @@ export function Pricing() {
           />
           <Plan
             featured
-            name="Small business"
+            name="专业版"
             price="$15"
             description="Perfect for small / medium sized businesses."
             href="/register"
@@ -163,7 +161,7 @@ export function Pricing() {
             ]}
           />
           <Plan
-            name="Enterprise"
+            name="企业版"
             price="$39"
             description="For even the biggest enterprise companies."
             href="/register"

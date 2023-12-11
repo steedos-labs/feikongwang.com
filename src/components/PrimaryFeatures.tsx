@@ -14,27 +14,27 @@ import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 
 const features = [
   {
-    title: 'Payroll',
+    title: '智能发票扫描和识别',
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+      "使用先进的OCR技术，实现高效准确的发票数据捕获，大幅度减少手动输入工作。",
     image: screenshotPayroll,
   },
   {
-    title: 'Claim expenses',
+    title: '费用查重和验真',
     description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+      "通过智能算法，系统能够自动检测和防止重复报销和欺诈行为，保障财务流程的完整性和准确性。",
     image: screenshotExpenses,
   },
   {
-    title: 'VAT handling',
+    title: '全面的预算管理功能',
     description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
+      "提供详细的预算设置和追踪工具，帮助企业更好地控制成本和预算。",
     image: screenshotVatReturns,
   },
   {
-    title: 'Reporting',
+    title: '费用报告和分析',
     description:
-      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
+      '生成详细的费用报告，提供关键的财务洞察，帮助企业做出更明智的财务决策。',
     image: screenshotReporting,
   },
 ]
@@ -74,13 +74,12 @@ export function PrimaryFeatures() {
         unoptimized
       />
       <Container className="relative">
-        <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
+        <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-4xl">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything you need to run your books.
+          智能发票识别，精确费控执行 
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Well everything you need if you aren’t that picky about minor
-            details like tax compliance.
+          通过自动化和智能化的流程，如自动发票扫描和识别、费用查重和验证，为企业提供全方位的费控管理解决方案，不仅提高了报销的效率和准确性，还实现了预算控制和财务透明度的大幅提升。
           </p>
         </div>
         <Tab.Group
