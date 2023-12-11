@@ -88,12 +88,10 @@ export function Testimonials() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Loved by businesses worldwide.
+          智能控费，赢得赞誉
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Our software is so simple that people can’t help but fall in love
-            with it. Simplicity is easy when you just skip tons of
-            mission-critical features.
+          费控王以其直观的操作和高效的功能，赢得了企业的广泛好评。简化的财务流程不仅节省了时间和成本，而且大大提高了工作效率。
           </p>
         </div>
         <ul
