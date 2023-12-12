@@ -1,7 +1,7 @@
 import glob from 'fast-glob'
 
 import { Providers } from '@/app/providers'
-import { Layout } from '@/components/Layout'
+import { Layout } from '@/components/docs/Layout'
 
 import '@/styles/tailwind.css'
 import { type Metadata } from 'next'

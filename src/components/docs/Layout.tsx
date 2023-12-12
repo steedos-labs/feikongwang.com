@@ -4,11 +4,11 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
-import { Logo } from '@/components/Logo'
-// import { Navigation } from '@/components/Navigation'
-import { type Section, SectionProvider } from '@/components/SectionProvider'
+import { Footer } from '@/components/docs/Footer'
+import { Header } from '@/components/docs/Header'
+import { Logo } from '@/components/docs/Logo'
+import { Navigation } from '@/components/docs/Navigation'
+import { type Section, SectionProvider } from '@/components/docs/SectionProvider'
 
 export function Layout({
   children,
@@ -33,7 +33,7 @@ export function Layout({
               </Link>
             </div>
             <Header />
-            {/* <Navigation className="hidden lg:mt-10 lg:block" /> */}
+            <Navigation className="hidden lg:mt-10 lg:block" />
           </div>
         </motion.header>
         <div className="relative flex h-full flex-col px-4 pt-14 sm:px-6 lg:px-8">
