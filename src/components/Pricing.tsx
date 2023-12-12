@@ -127,14 +127,14 @@ export function Pricing() {
               <span className="relative">选择适合您的版本</span>
             </span>{' '}
           </h2>
-          {/* <p className="mt-4 text-lg text-slate-400">
-          释放增长潜力，使用完全可定制的费控自动化软件。
-          </p> */}
+          <p className="mt-4 text-lg text-slate-400">
+          以下报价仅供参考，请联系我们的销售人员签署购买合同。
+          </p>
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
             name="入门版"
-            price="¥800"
+            price="¥960"
             description="线上处理电子发票，适合个人或小团队使用。"
             href="/register"
             features={[
@@ -148,20 +148,20 @@ export function Pricing() {
           <Plan
             featured
             name="专业版"
-            price="¥2000"
+            price="¥3000"
             description="中小企业最佳费控管理云服务。"
             href="/register"
             features={[
               '管理合同与对公付款',
-              '数据审计日志与安全日志',
               '自定义流程审批单样式',
               '自定义单据打印样式',
-              '数据导入与导出',
+              '高级数据分析报告',
+              '数据审计日志与安全日志',
             ]}
           />
           <Plan
             name="企业版"
-            price="¥5000"
+            price="¥6000"
             description="更灵活的自定义和应用集成，支持私有部署。"
             href="/register"
             features={[
