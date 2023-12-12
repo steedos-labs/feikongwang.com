@@ -234,11 +234,10 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            低代码驱动，轻松定制。
+          根据您的具体业务需求进行自定义
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Because you’d probably be a little confused if we suggested you
-            complicate your everyday business tasks instead.
+          利用费控王，您可以自定义层级并设置权限，控制谁能看到什么、谁拥有审批权，并确保适当的人员拥有正确访问权限来出色地完成工作。
           </p>
         </div>
         <FeaturesMobile />

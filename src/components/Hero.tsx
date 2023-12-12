@@ -45,7 +45,8 @@ export function Hero() {
           <span className="ml-3">视频演示</span>
         </Button>
       </div>
-      <div className="mt-36 lg:mt-44">
+      <div className="mt-36 lg:mt-44"></div>
+      <div className="mt-36 lg:mt-44 hidden">
         <p className="font-display text-base text-slate-900">
           成功案例
         </p>

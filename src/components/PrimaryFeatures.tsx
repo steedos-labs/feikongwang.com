@@ -26,9 +26,9 @@ const features = [
     image: screenshotExpenses,
   },
   {
-    title: '全面的预算管理功能',
+    title: '移动应用',
     description:
-      "提供详细的预算设置和追踪工具，帮助企业更好地控制成本和预算。",
+      "员工可通过拍摄单据照片来创建和提交费用报销。管理人员能够迅速地通过移动设备来审批或拒绝每一份费用报告。",
     image: screenshotVatReturns,
   },
   {

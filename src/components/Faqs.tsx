@@ -6,9 +6,9 @@ import backgroundImage from '@/images/background-faqs.jpg'
 const faqs = [
   [
     {
-      question: 'Does TaxPal handle VAT?',
+      question: '费控系统是什么？',
       answer:
-        'Well no, but if you move your company offshore you can probably ignore it.',
+        '费控系统是一种帮助企业管理和控制财务支出的软件，通常包括报销管理、预算控制、发票处理等功能。',
     },
     {
       question: 'Can I pay for my subscription via purchase order?',
