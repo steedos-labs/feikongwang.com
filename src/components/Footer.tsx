@@ -12,10 +12,10 @@ export function Footer() {
           <Logo className="mx-auto h-10 w-auto" />
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
-              <NavLink href="#features">功能</NavLink>
+              <NavLink href="/">概览</NavLink>
               {/* <NavLink href="#testimonials">客户评价</NavLink> */}
-              <NavLink href="#pricing">报价</NavLink>
-              <NavLink href="/docs/">文档</NavLink>
+              <NavLink href="/pricing">报价</NavLink>
+              <NavLink href="/docs">文档</NavLink>
             </div>
           </nav>
         </div>
