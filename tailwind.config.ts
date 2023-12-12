@@ -1,6 +1,8 @@
 import formsPlugin from '@tailwindcss/forms'
-import headlessuiPlugin from '@headlessui/tailwindcss'
 import { type Config } from 'tailwindcss'
+import typographyStyles from './typography'
+import typographyPlugin from '@tailwindcss/typography'
+import headlessuiPlugin from '@headlessui/tailwindcss'
 
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -33,5 +35,5 @@ export default {
       },
     },
   },
-  plugins: [formsPlugin, headlessuiPlugin],
+  plugins: [formsPlugin, typographyPlugin, headlessuiPlugin],
 } satisfies Config
