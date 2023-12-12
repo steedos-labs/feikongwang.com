@@ -31,13 +31,13 @@ export default async function DocsLayout({
 
   return (
     // <html lang="en" className="h-full" suppressHydrationWarning>
-    //   <body className="flex min-h-full bg-white antialiased dark:bg-zinc-900">
+      <div className="flex min-h-full bg-white antialiased dark:bg-zinc-900">
         <Providers>
           <div className="w-full">
             <Layout allSections={allSections}>{children}</Layout>
           </div>
         </Providers>
-    //   </body>
+      </div>
     // </html>
   )
 }
