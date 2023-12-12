@@ -1,0 +1,44 @@
+name: Deploy to AWS S3 and CloudFront
+
+on:
+  push:
+    branches:
+      - main  # 或者您用于部署的分支
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '16' 
+
+    - name: Build Next.js Site
+      run: |
+        npm install
+        npm run build
+
+    - name: Deploy to S3
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --follow-symlinks --delete
+      env:
+        AWS_S3_BUCKET: feikongwang.com # 您的S3桶名
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'cn-northwest-1' # 选择合适的中国区域
+        SOURCE_DIR: 'out' # Next.js输出的目录
+
+    # - name: Invalidate CloudFront Distribution
+    #   uses: chetan/invalidate-cloudfront-action@v1
+    #   env:
+    #     DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} # 您的CloudFront分发ID
+    #     PATHS: '/' # 需要刷新的路径
+    #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    #     AWS_REGION: 'cn-northwest-1' # 选择合适的中国区域
