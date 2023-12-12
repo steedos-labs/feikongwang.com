@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { AnimatePresence, motion, useIsPresent } from 'framer-motion'
 
-import { Button } from '@/components/Button'
+import { Button } from '@/components/docs/Button'
 import { useIsInsideMobileNavigation } from '@/components/docs/MobileNavigation'
 import { useSectionStore } from '@/components/docs/SectionProvider'
 import { Tag } from '@/components/docs/Tag'
@@ -233,23 +233,14 @@ export const navigation: Array<NavGroup> = [
   {
     title: 'Guides',
     links: [
-      { title: 'Introduction', href: '/' },
-      { title: 'Quickstart', href: '/quickstart' },
-      { title: 'SDKs', href: '/sdks' },
-      { title: 'Authentication', href: '/authentication' },
-      { title: 'Pagination', href: '/pagination' },
-      { title: 'Errors', href: '/errors' },
-      { title: 'Webhooks', href: '/webhooks' },
+      { title: 'Introduction', href: '/docs/' },
+      { title: 'Quickstart', href: '/docs/quickstart' },
     ],
   },
   {
     title: 'Resources',
     links: [
-      { title: 'Contacts', href: '/contacts' },
-      { title: 'Conversations', href: '/conversations' },
-      { title: 'Messages', href: '/messages' },
-      { title: 'Groups', href: '/groups' },
-      { title: 'Attachments', href: '/attachments' },
+      { title: 'Videos', href: '/docs/videos' },
     ],
   },
 ]

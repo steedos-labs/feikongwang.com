@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 import { Footer } from '@/components/docs/Footer'
 import { Header } from '@/components/docs/Header'
-import { Logo } from '@/components/docs/Logo'
+import { Logo } from '@/components/Logo'
 import { Navigation } from '@/components/docs/Navigation'
 import { type Section, SectionProvider } from '@/components/docs/SectionProvider'
 
@@ -29,7 +29,7 @@ export function Layout({
           <div className="contents lg:pointer-events-auto lg:block lg:w-72 lg:overflow-y-auto lg:border-r lg:border-zinc-900/10 lg:px-6 lg:pb-8 lg:pt-4 lg:dark:border-white/10 xl:w-80">
             <div className="hidden lg:flex">
               <Link href="/" aria-label="Home">
-                <Logo className="h-6" />
+                <Logo className="h-8" />
               </Link>
             </div>
             <Header />

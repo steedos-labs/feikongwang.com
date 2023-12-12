@@ -1,7 +1,7 @@
 import { Inter, Lexend } from 'next/font/google'
 import clsx from 'clsx'
 
-import { Providers } from '@/app/providers'
+import { Providers } from '@/app/docs/providers'
 import '@/styles/tailwind.css'
 import { type Metadata } from 'next'
 
@@ -44,9 +44,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="/logo.png"/>
       </head>
       <body className="flex h-full flex-col">
-        <Providers>
           {children}
-        </Providers>
       </body>
     </html>
   )

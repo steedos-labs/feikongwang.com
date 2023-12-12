@@ -46,7 +46,7 @@ export function Footer() {
             </Link> */}
           </div>
           <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-            &copy; {new Date().getFullYear()} 华炎软件.
+            &copy; {new Date().getFullYear()} 华炎网络.
           </p>
         </div>
       </Container>
