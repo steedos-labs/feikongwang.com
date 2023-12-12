@@ -2,8 +2,8 @@ name: Deploy to AWS S3 and CloudFront
 
 on:
   push:
-    branches:
-      - main  # 或者您用于部署的分支
+    tags: # Deploy tag (e.g. v1.0) to production
+      - 'v**'
 
 jobs:
   deploy:
@@ -34,11 +34,11 @@ jobs:
         AWS_REGION: 'cn-northwest-1' # 选择合适的中国区域
         SOURCE_DIR: 'out' # Next.js输出的目录
 
-    # - name: Invalidate CloudFront Distribution
-    #   uses: chetan/invalidate-cloudfront-action@v1
-    #   env:
-    #     DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} # 您的CloudFront分发ID
-    #     PATHS: '/' # 需要刷新的路径
-    #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-    #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-    #     AWS_REGION: 'cn-northwest-1' # 选择合适的中国区域
+    - name: Invalidate CloudFront Distribution
+      uses: chetan/invalidate-cloudfront-action@v1
+      env:
+        DISTRIBUTION: E2VWVXNFWF0K70 # 您的CloudFront分发ID
+        PATHS: '/' # 需要刷新的路径
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'cn-northwest-1' # 选择合适的中国区域
