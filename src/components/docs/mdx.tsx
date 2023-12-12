@@ -1,21 +1,21 @@
 import Link from 'next/link'
 import clsx from 'clsx'
 
-import { Feedback } from '@/components/Feedback'
+import { Feedback } from '@/components/docs/Feedback'
 import { Heading } from '@/components/docs/Heading'
-import { Prose } from '@/components/Prose'
+import { Prose } from '@/components/docs/Prose'
 
 export const a = Link
-export { Button } from '@/components/Button'
+export { Button } from '@/components/docs/Button'
 export { CodeGroup, Code as code, Pre as pre } from '@/components/docs/Code'
 
 export function wrapper({ children }: { children: React.ReactNode }) {
   return (
     <article className="flex h-full flex-col pb-10 pt-16">
       <Prose className="flex-auto">{children}</Prose>
-      <footer className="mx-auto mt-16 w-full max-w-2xl lg:max-w-5xl">
+      {/* <footer className="mx-auto mt-16 w-full max-w-2xl lg:max-w-5xl">
         <Feedback />
-      </footer>
+      </footer> */}
     </article>
   )
 }

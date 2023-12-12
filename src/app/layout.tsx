@@ -35,7 +35,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={clsx(
-        'h-full scroll-smooth bg-white antialiased',
+        'h-full scroll-smooth',
         inter.variable,
         lexend.variable,
       )}
@@ -43,7 +43,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/png" href="/logo.png"/>
       </head>
-      <body className="flex h-full flex-col">
+      <body className="flex h-full flex-col min-h-full bg-white antialiased dark:bg-zinc-900">
           {children}
       </body>
     </html>
