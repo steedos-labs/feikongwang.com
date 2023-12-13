@@ -1,6 +1,5 @@
 import { CallToAction } from '@/components/expense/CallToAction'
 import { Faqs } from '@/components/expense/Faqs'
-import { Footer } from '@/components/GlobalFooter'
 import { Hero } from '@/components/expense/Hero'
 import { Pricing } from '@/components/expense/Pricing'
 import { PrimaryFeatures } from '@/components/expense/PrimaryFeatures'

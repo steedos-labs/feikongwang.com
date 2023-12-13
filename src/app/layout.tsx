@@ -4,8 +4,6 @@ import clsx from 'clsx'
 import { Providers } from '@/app/docs/providers'
 import '@/styles/tailwind.css'
 import { type Metadata } from 'next'
-import { GlobalHeader } from '@/components/GlobalHeader'
-import { Footer } from '@/components/GlobalFooter'
 
 export const metadata: Metadata = {
   title: {
