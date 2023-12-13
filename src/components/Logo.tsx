@@ -28,6 +28,11 @@ export function Logo(props: React.ComponentPropsWithoutRef<any>) {
     //     fill="#0F172A"
     //   />
     // </svg>
-    <img src="/logo.png" alt="logo" {...props} />
+    <div className="flex flex-row justify-center items-center">
+      <div>
+        <img src="/logo.png" alt="logo" {...props} />
+      </div>
+      <div className="pl-2 text-lg font-bold">费控王</div>
+    </div>
   )
 }

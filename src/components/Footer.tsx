@@ -15,7 +15,7 @@ export function Footer() {
               <NavLink href="/">概览</NavLink>
               {/* <NavLink href="#testimonials">客户评价</NavLink> */}
               <NavLink href="/pricing">报价</NavLink>
-              <NavLink href="/docs">文档</NavLink>
+              {/* <NavLink href="/docs">文档</NavLink> */}
             </div>
           </nav>
         </div>

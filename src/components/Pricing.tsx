@@ -128,7 +128,7 @@ export function Pricing() {
             </span>{' '}
           </h2>
           <p className="mt-4 text-lg text-slate-400">
-          以下报价仅供参考，请联系我们的销售人员签署购买合同。
+          以下报价仅供参考。购买咨询 400-820-1612。
           </p>
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">

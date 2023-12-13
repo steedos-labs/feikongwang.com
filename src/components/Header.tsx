@@ -88,7 +88,7 @@ function MobileNavigation() {
             <MobileNavLink href="/">概览</MobileNavLink>
             {/* <MobileNavLink href="/#testimonials">客户评价</MobileNavLink> */}
             <MobileNavLink href="/pricing">报价</MobileNavLink>
-            <MobileNavLink href="/docs">文档</MobileNavLink>
+            {/* <MobileNavLink href="/docs">文档</MobileNavLink> */}
             <hr className="m-2 border-slate-300/40" />
             <MobileNavLink href="/login">登录</MobileNavLink>
           </Popover.Panel>
@@ -111,7 +111,7 @@ export function Header() {
               <NavLink href="/">概览</NavLink>
               {/* <NavLink href="/#testimonials">客户评价</NavLink> */}
               <NavLink href="/pricing">报价</NavLink>
-              <NavLink href="/docs">文档</NavLink>
+              {/* <NavLink href="/docs">文档</NavLink> */}
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
