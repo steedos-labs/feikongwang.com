@@ -1,6 +1,6 @@
 'use client'
 
-import { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
@@ -9,6 +9,32 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+import { SteedosID } from '@/components/SteedosID'
+
+
+const Login = async () => {
+  const keycloak = new (window as any).Keycloak({
+    url: "https://id.steedos.cn",
+    realm: "master",
+    clientId: "steedos-oidc-public",
+  });
+  (window as any).keycloak = keycloak;
+
+  const authenticated = await keycloak.init({
+    onLoad: "check-sso",
+    silentCheckSsoRedirectUri:
+      window.location.origin + "/silent-check-sso.html",
+  });
+  if (!authenticated) {
+    keycloak.login();
+  } else {
+    const user = await keycloak.loadUserInfo();
+    const profile = await keycloak.loadUserProfile();
+  }
+
+  return authenticated;
+};
+
 
 function MobileNavLink({
   href,
@@ -99,6 +125,18 @@ function MobileNavigation() {
 }
 
 export function GlobalHeader() {
+  let [authenticated, setAuthenticated] = useState(false);
+  let [user, setUser] = useState({});
+  let [profile, setProfile] = useState({});
+
+  useEffect(() => {
+    Login().then((authenticated) => {
+      setAuthenticated(authenticated);
+      setUser((window as any).keycloak.userInfo);
+      setProfile((window as any).keycloak.profile);
+    });
+  }, []);
+  
   return (
     <header className="py-2 z-10 border-b border-slate-200 bg-slate-100">
       <Container>

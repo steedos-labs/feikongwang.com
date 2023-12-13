@@ -42,6 +42,10 @@ export default function RootLayout({
     >
       <head>
         <link rel="icon" type="image/png" href="/logo.png"/>
+        <script
+          src="https://unpkg.steedos.cn/keycloak-js@21.0.2/dist/keycloak.js"
+          defer
+        ></script>
       </head>
       <body className="flex h-full flex-col min-h-full bg-white antialiased dark:bg-zinc-900">
           {children}
