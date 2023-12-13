@@ -32,7 +32,7 @@ export function Logo(props: React.ComponentPropsWithoutRef<any>) {
       <div>
         <img src="/logo.png" alt="logo" {...props} />
       </div>
-      <div className="pl-2 text-lg font-bold">费控王</div>
+      <div className="pl-1 text-lg font-bold">费控王</div>
     </div>
   )
 }
