@@ -1,11 +1,13 @@
 import { CallToAction } from '@/components/CallToAction'
 import { Products } from '@/components/Products'
-import { Header } from '@/components/Header'
+import { GlobalHeader } from '@/components/GlobalHeader'
 import { Hero } from '@/components/Hero'
+import { GlobalFooter } from '@/components/GlobalFooter'
 
 export default function Home() {
   return (
-    <>
+    <>          
+      <GlobalHeader />
       <main>
         <Hero />
         <Products />
@@ -14,6 +16,7 @@ export default function Home() {
         {/* <Testimonials /> */}
         {/* <Faqs /> */}
       </main>
+      <GlobalFooter/>
     </>
   )
 }

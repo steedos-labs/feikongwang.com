@@ -5,6 +5,8 @@ import { Providers } from '@/app/docs/providers'
 import '@/styles/tailwind.css'
 import { type Metadata } from 'next'
 import { Header } from '@/components/expense/Header'
+import { GlobalHeader } from '@/components/GlobalHeader'
+import { GlobalFooter } from '@/components/GlobalFooter'
 
 export const metadata: Metadata = {
   title: {
@@ -34,8 +36,10 @@ export default function RootLayout({
 }) {
   return (
     <>
+      <GlobalHeader />
       <Header />
       {children}
+      <GlobalFooter/>
     </>    
   )
 }

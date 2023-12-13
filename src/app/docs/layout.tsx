@@ -30,14 +30,14 @@ export default async function DocsLayout({
   let allSections = Object.fromEntries(allSectionsEntries)
 
   return (
-    // <html lang="en" className="h-full" suppressHydrationWarning>
-    //   <body className="flex min-h-full bg-white antialiased dark:bg-zinc-900">
+    <html lang="en" className="h-full" suppressHydrationWarning>
+      <body className="flex min-h-full bg-white antialiased dark:bg-zinc-900">
         <Providers>
           <div className="w-full">
             <Layout allSections={allSections}>{children}</Layout>
           </div>
         </Providers>
-    //   </body>
-    // </html>
+      </body>
+    </html>
   )
 }

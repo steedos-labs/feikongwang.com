@@ -9,7 +9,7 @@ import {
 
 const actions = [
   {
-    title: '报销',
+    title: '费用报销',
     href: '/expense/',
     description: '快速准确的识别各种发票，自动检测重复提交的发票，并对发票的真伪进行验证，有效防止报销过程中的欺诈和错误。',
     icon: ClockIcon,
@@ -73,7 +73,7 @@ export function Products() {
               actionIdx === 1 ? 'sm:rounded-tr-lg' : '',
               actionIdx === actions.length - 2 ? 'sm:rounded-bl-lg' : '',
               actionIdx === actions.length - 1 ? 'rounded-bl-lg rounded-br-lg sm:rounded-bl-none' : '',
-              'group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 hover:bg-green-100'
+              'group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 hover:bg-slate-50'
             )}
           >
             <div>
@@ -81,7 +81,7 @@ export function Products() {
                 className={classNames(
                   action.iconBackground,
                   action.iconForeground,
-                  'inline-flex rounded-lg p-3 ring-0 ring-slate-100'
+                  'inline-flex rounded-lg p-3 ring-2 ring-white'
                 )}
               >
                 <action.icon className="h-6 w-6" aria-hidden="true" />

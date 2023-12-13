@@ -4,8 +4,8 @@ import clsx from 'clsx'
 import { Providers } from '@/app/docs/providers'
 import '@/styles/tailwind.css'
 import { type Metadata } from 'next'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
+import { GlobalHeader } from '@/components/GlobalHeader'
+import { Footer } from '@/components/GlobalFooter'
 
 export const metadata: Metadata = {
   title: {
@@ -46,9 +46,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="/logo.png"/>
       </head>
       <body className="flex h-full flex-col min-h-full bg-white antialiased dark:bg-zinc-900">
-          <Header />
           {children}
-          <Footer />
       </body>
     </html>
   )
