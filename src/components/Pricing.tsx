@@ -83,7 +83,7 @@ function Plan({
       </p>
       <div className="pt-4 font-display text-5xl font-light tracking-tight text-white">
         {price}
-        <p className="pt-2 font-normal text-lg">每10用户/年</p>
+        <p className="pt-2 font-normal text-lg">用户/年</p>
       </div>
       <ul
         role="list"
@@ -133,43 +133,43 @@ export function Pricing() {
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
-            name="入门版"
-            price="¥960"
-            description="线上处理电子发票，适合个人或小团队使用。"
+            name="免费版"
+            price="0"
+            description="帮助小型团队和自由职业者管理费用。"
             href="/register"
             features={[
-              '智能发票扫描识别',
-              '发票查重与验真',
-              '费用报销申请与审批',
-              '查看费用报告和分析',
+              '最多5个用户',
+              '5GB票据存储',
+              '发票录入',
+              '费用报告审批',
               '移动应用',
             ]}
           />
           <Plan
             featured
             name="专业版"
-            price="¥3000"
-            description="中小企业最佳费控管理云服务。"
+            price="¥360"
+            description="对于费用开支高昂的中小企业，需要强大的控制和强大的工作流程。"
             href="/register"
             features={[
-              '管理合同与对公付款',
-              '自定义流程审批单样式',
-              '自定义单据打印样式',
-              '高级数据分析报告',
-              '数据审计日志与安全日志',
+              '用户无限制',
+              '发票扫描识别',
+              '发票真伪验证',
+              '差旅管理',
+              '高级定制',
             ]}
           />
           <Plan
             name="企业版"
-            price="¥6000"
-            description="更灵活的自定义和应用集成，支持私有部署。"
+            price="¥600"
+            description="专为具有高自定义需求、集成解决方案和其他复杂需求企业而定制。"
             href="/register"
             features={[
-              '自定义业务字段',
-              '自定义数据分析',
-              '自定义数据访问权限',
-              '与现有业务系统集成',
-              '基于低代码平台，实现深度业务自定义',
+              '支持私有部署',
+              '单点登录',
+              'ERP、财务系统集成',
+              '专属客户经理',
+              '高级审核跟踪报告',
             ]}
           />
         </div>
