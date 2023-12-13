@@ -86,12 +86,12 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="py-2 z-0">
+    <header className="top-0 sticky py-2 z-0">
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="/expense/" aria-label="Home">
-              <div className="pl-1 text-2xl font-bold">费用</div>
+              <div className="pl-1 text-2xl font-bold">报销</div>
             </Link>
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="/expense/">概览</NavLink>

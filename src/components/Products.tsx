@@ -9,7 +9,7 @@ import {
 
 const actions = [
   {
-    title: '费用报销',
+    title: '报销',
     href: '/expense/',
     description: '快速准确的识别各种发票，自动检测重复提交的发票，并对发票的真伪进行验证，有效防止报销过程中的欺诈和错误。',
     icon: ClockIcon,
@@ -17,9 +17,9 @@ const actions = [
     iconBackground: 'bg-teal-50',
   },
   {
-    title: '对公付款',
-    href: '/invoice/',
-    description: '通过智能算法，系统能够自动检测和防止重复报销和欺诈行为，保障财务流程的完整性和准确性。',
+    title: '对公付款（即将上线）',
+    href: '#',
+    description: '可连接企业所有的开支产生来源，帮助企业高效管理供应商付款及现金流，移动应用版本亦可帮助审批人员精简处理流程。',
     icon: CheckBadgeIcon,
     iconForeground: 'text-purple-700',
     iconBackground: 'bg-purple-50',
@@ -62,9 +62,9 @@ export function Products() {
   return (
     <section
         id="products"
-        className="relative overflow-hidden bg-blue-600 pb-28 pt-20 sm:py-32"
+        className="relative overflow-hidden bg-green-900 pb-28 pt-20 sm:py-32"
       >
-      <div className="mx-auto max-w-3xl divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-200 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
+      <div className="mx-auto max-w-3xl divide-y divide-slate-200 overflow-hidden rounded-lg bg-slate-200 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
         {actions.map((action, actionIdx) => (
           <div
             key={action.title}
@@ -73,7 +73,7 @@ export function Products() {
               actionIdx === 1 ? 'sm:rounded-tr-lg' : '',
               actionIdx === actions.length - 2 ? 'sm:rounded-bl-lg' : '',
               actionIdx === actions.length - 1 ? 'rounded-bl-lg rounded-br-lg sm:rounded-bl-none' : '',
-              'group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500'
+              'group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 hover:bg-green-100'
             )}
           >
             <div>
@@ -81,26 +81,26 @@ export function Products() {
                 className={classNames(
                   action.iconBackground,
                   action.iconForeground,
-                  'inline-flex rounded-lg p-3 ring-4 ring-white'
+                  'inline-flex rounded-lg p-3 ring-0 ring-slate-100'
                 )}
               >
                 <action.icon className="h-6 w-6" aria-hidden="true" />
               </span>
             </div>
             <div className="mt-8">
-              <h3 className="text-base font-semibold leading-6 text-gray-900">
+              <h3 className="text-base font-semibold leading-6 text-slate-900">
                 <a href={action.href} className="focus:outline-none">
                   {/* Extend touch target to entire panel */}
                   <span className="absolute inset-0" aria-hidden="true" />
                   {action.title}
                 </a>
               </h3>
-              <p className="mt-2 text-sm text-gray-500">
+              <p className="mt-2 text-sm text-slate-500">
                 {action.description}
               </p>
             </div>
             <span
-              className="pointer-events-none absolute right-6 top-6 text-gray-300 group-hover:text-gray-400"
+              className="pointer-events-none absolute right-6 top-6 text-slate-300 group-hover:text-slate-400"
               aria-hidden="true"
             >
               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
