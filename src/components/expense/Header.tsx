@@ -26,28 +26,16 @@ function MobileNavLink({
 
 function MobileNavIcon({ open }: { open: boolean }) {
   return (
-    <svg
-      aria-hidden="true"
-      className="h-3.5 w-3.5 overflow-visible stroke-slate-700"
-      fill="none"
-      strokeWidth={2}
-      strokeLinecap="round"
+    <svg xmlns="http://www.w3.org/2000/svg" 
+      fill="none" 
+      viewBox="0 0 24 24" 
+      strokeWidth={2} 
+      stroke="currentColor" 
+      className="h-5 w-5 overflow-visible stroke-slate-700"
     >
-      <path
-        d="M0 1H14M0 7H14M0 13H14"
-        className={clsx(
-          'origin-center transition',
-          open && 'scale-90 opacity-0',
-        )}
-      />
-      <path
-        d="M2 2L12 12M12 2L2 12"
-        className={clsx(
-          'origin-center transition',
-          !open && 'scale-90 opacity-0',
-        )}
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
     </svg>
+
   )
 }
 
@@ -85,12 +73,10 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            {/* <MobileNavLink href="/expense/">报销</MobileNavLink> */}
+            <MobileNavLink href="/expense/">概览</MobileNavLink>
             {/* <MobileNavLink href="/#testimonials">客户评价</MobileNavLink> */}
             {/* <MobileNavLink href="/pricing">报价</MobileNavLink> */}
             {/* <MobileNavLink href="/docs">文档</MobileNavLink> */}
-            <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="/login">登录</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -100,29 +86,24 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="py-2 z-10 border-b border-slate-200">
+    <header className="py-2 z-0">
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
-            <Link href="/" aria-label="Home">
-              <Logo className="h-10 w-auto" />
+            <Link href="/expense/" aria-label="Home">
+              <div className="pl-1 text-2xl font-bold">费用</div>
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              {/* <NavLink href="/expense/">报销</NavLink> */}
+              <NavLink href="/expense/">概览</NavLink>
               {/* <NavLink href="/#testimonials">客户评价</NavLink> */}
-              {/* <NavLink href="/pricing">报价</NavLink> */}
+              <NavLink href="/expense/pricing">报价</NavLink>
               {/* <NavLink href="/docs">文档</NavLink> */}
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block">
+            {/* <div className="hidden md:block">
               <NavLink href="/login">登录</NavLink>
-            </div>
-            <Button href="/register" color="blue">
-              <span>
-                免费注册
-              </span>
-            </Button>
+            </div> */}
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>

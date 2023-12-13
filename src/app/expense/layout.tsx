@@ -4,13 +4,12 @@ import clsx from 'clsx'
 import { Providers } from '@/app/docs/providers'
 import '@/styles/tailwind.css'
 import { type Metadata } from 'next'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
+import { Header } from '@/components/expense/Header'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - 费控王',
-    default: '费控王 - 智能验票，精准控费！',
+    template: '%s - 报销 | 费控王',
+    default: '费控王报销 - 智能验票，精准控费！',
   },
   description:
     'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
@@ -34,22 +33,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className={clsx(
-        'h-full scroll-smooth',
-        inter.variable,
-        lexend.variable,
-      )}
-    >
-      <head>
-        <link rel="icon" type="image/png" href="/logo.png"/>
-      </head>
-      <body className="flex h-full flex-col min-h-full bg-white antialiased dark:bg-zinc-900">
-          <Header />
-          {children}
-          <Footer />
-      </body>
-    </html>
+    <>
+      <Header />
+      {children}
+    </>    
   )
 }
