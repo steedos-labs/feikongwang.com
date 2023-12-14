@@ -26,16 +26,16 @@ const features = [
     image: screenshotExpenses,
   },
   {
-    title: '移动应用',
-    description:
-      "员工可通过拍摄单据照片来创建和提交费用报销。管理人员能够迅速地通过移动设备来审批或拒绝每一份费用报告。",
-    image: screenshotVatReturns,
-  },
-  {
     title: '费用报告和分析',
     description:
       '生成详细的费用报告，提供关键的财务洞察，帮助企业做出更明智的财务决策。',
     image: screenshotReporting,
+  },
+  {
+    title: '移动应用',
+    description:
+      "员工可通过拍摄单据照片来创建和提交费用报销。管理人员能够迅速地通过移动设备来审批或拒绝每一份费用报告。",
+    image: screenshotVatReturns,
   },
 ]
 
