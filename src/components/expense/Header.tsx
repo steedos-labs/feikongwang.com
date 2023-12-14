@@ -86,14 +86,14 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="py-6 z-0">
+    <header className="py-4 z-0 shadow">
       <Container>
         <nav className="relative z-50 flex justify-between">
-          <div className="flex items-center md:gap-x-12">
+          <div className="flex items-center md:gap-x-10">
             <Link href="/expense/" aria-label="Home">
-              <div className="pl-1 text-2xl font-bold">费用报销</div>
+              <div className="pl-1 text-xl font-bold">费用报销</div>
             </Link>
-            <div className="hidden md:flex md:gap-x-6">
+            <div className="hidden md:flex md:gap-x-6 border-l md:pl-6">
               <NavLink href="/expense/">概览</NavLink>
               {/* <NavLink href="/#testimonials">客户评价</NavLink> */}
               <NavLink href="/expense/pricing">报价</NavLink>
