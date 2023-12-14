@@ -25,8 +25,16 @@ const NavLink = ({
     </Link>
   )
 }
+const Login = async()=> {
+  (window as any).keycloak.login();
+}
 
-const Login = async () => {
+
+const Logout = async()=> {
+  (window as any).keycloak.logout();
+}
+
+const isAuthenticated = async () => {
   const keycloak = new (window as any).Keycloak({
     url: "https://id.steedos.cn",
     realm: "master",
@@ -39,12 +47,6 @@ const Login = async () => {
     silentCheckSsoRedirectUri:
       window.location.origin + "/silent-check-sso.html",
   });
-  if (authenticated) {
-    return false;
-  } else {
-    const user = await keycloak.loadUserInfo();
-    const profile = await keycloak.loadUserProfile();
-  }
 
   return authenticated;
 };
@@ -140,17 +142,27 @@ function MobileNavigation() {
 
 export function GlobalHeader() {
   let [authenticated, setAuthenticated] = useState(false);
-  let [user, setUser] = useState({});
-  let [profile, setProfile] = useState({});
+  let [user, setUser] = useState<any>();
+  let [profile, setProfile] = useState<any>();
 
   useEffect(() => {
-    Login().then((authenticated) => {
+    isAuthenticated().then((authenticated) => {
       setAuthenticated(authenticated);
-      setUser((window as any).keycloak.userInfo);
-      setProfile((window as any).keycloak.profile);
+      console.log(authenticated);
     });
   }, []);
   
+  useEffect(() => {
+    if (authenticated) {
+      (window as any).keycloak.loadUserInfo().then((userInfo:any) => {
+        setUser(userInfo);
+      });
+      (window as any).keycloak.loadUserProfile().then((profile:any) => {
+        setProfile(profile);
+      });
+    }
+  }, [authenticated]);
+
   return (
     <header className="py-2 z-10 bg-black">
       <Container>
@@ -167,14 +179,31 @@ export function GlobalHeader() {
               {/* <NavLink href="/pricing">报价</NavLink> */}
               <NavLink href="/docs/">文档</NavLink>
             </div>
-            <div className="hidden md:block md:border-l md:border-slate-300 md:pl-8">
-              <NavLink href="/login">登录</NavLink>
-            </div>
-            <Button href="/register" color="blue">
-              <span>
-                免费注册
-              </span>
-            </Button>
+            {!authenticated && (
+              <>
+                <div className="hidden md:block md:border-l md:border-slate-300 md:pl-8">
+                  <a className="inline-block rounded-lg px-2 py-1 font-medium text-slate-300  hover:text-slate-100" 
+                    onClick={Login}>登录</a>
+                </div>
+                <Button href="/register" color="blue">
+                  <span>
+                    免费注册
+                  </span>
+                </Button>
+              </>
+            )}
+            {user &&(
+              <>
+                <div className="hidden text-slate-300 text-sm md:block md:border-l md:border-slate-300 md:pl-8">
+                  {user.name}
+                </div>
+                <Button onClick={Logout} color="blue">
+                  <span>
+                    注销
+                  </span>
+                </Button>
+              </>
+            )}
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>
