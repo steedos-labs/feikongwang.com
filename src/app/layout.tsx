@@ -42,10 +42,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/png" href="/logo.png"/>
         <script
-          src="https://unpkg.steedos.cn/keycloak-js@21.0.2/dist/keycloak.js"
+          src="/js/keycloak.js"
           defer
         ></script>
-        <script type="text/javascript" id="zsiqchat" src="/js/zoho-salesiq.js"></script>
+        <script type="text/javascript" id="zsiqchat" src="/js/salesiq.js"></script>
       </head>
       <body className="flex h-full flex-col min-h-full bg-white antialiased dark:bg-zinc-900">
           {children}
