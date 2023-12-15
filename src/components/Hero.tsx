@@ -31,8 +31,8 @@ export function Hero() {
       费用管理流程自动化，让业务随时随地高效运行。
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="/register">免费试用</Button>
-        <Button
+        <Button href="/register">快速开始</Button>
+        {/* <Button
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           variant="outline"
         >
@@ -43,7 +43,7 @@ export function Hero() {
             <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z" />
           </svg>
           <span className="ml-3">视频演示</span>
-        </Button>
+        </Button> */}
       </div>
       {/* <div className="mt-36 lg:mt-44"></div> */}
       <div className="mt-36 lg:mt-44 hidden">
