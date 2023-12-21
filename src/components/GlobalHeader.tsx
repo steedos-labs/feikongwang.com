@@ -25,6 +25,7 @@ const NavLink = ({
     </Link>
   )
 }
+
 const Login = async()=> {
   (window as any).keycloak.login();
 }
@@ -127,7 +128,8 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="/expense/">报销</MobileNavLink>
+            <MobileNavLink href="/expense">费用管理</MobileNavLink>
+            <MobileNavLink href="/invoice">对公支付</MobileNavLink>
             {/* <MobileNavLink href="/#testimonials">客户评价</MobileNavLink> */}
             {/* <MobileNavLink href="/pricing">报价</MobileNavLink> */}
             <MobileNavLink href="/docs/">文档</MobileNavLink>
@@ -174,7 +176,8 @@ export function GlobalHeader() {
           </div>
           <div className="flex items-center gap-x-6 md:gap-x-8">
             <div className="hidden md:flex md:gap-x-8">
-              <NavLink href="/expense/">费用报销</NavLink>
+              <NavLink href="/expense">费用管理</NavLink>
+              <NavLink href="/invoice">对公支付</NavLink>
               {/* <NavLink href="/#testimonials">客户评价</NavLink> */}
               {/* <NavLink href="/pricing">报价</NavLink> */}
               <NavLink href="/docs/">文档</NavLink>

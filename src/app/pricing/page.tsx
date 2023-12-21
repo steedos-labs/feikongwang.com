@@ -1,5 +1,5 @@
 
-import { Pricing } from '@/components/expense/Pricing'
+import { Pricing } from '@/components/Pricing'
 
 export default function Home() {
   return (

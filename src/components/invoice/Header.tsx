@@ -73,7 +73,7 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="/expense/">概览</MobileNavLink>
+            <MobileNavLink href="/invoice/">概览</MobileNavLink>
             {/* <MobileNavLink href="/#testimonials">客户评价</MobileNavLink> */}
             {/* <MobileNavLink href="/pricing">报价</MobileNavLink> */}
             {/* <MobileNavLink href="/docs">文档</MobileNavLink> */}
@@ -90,13 +90,13 @@ export function Header() {
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-10">
-            <Link href="/expense/" aria-label="Home">
-              <div className="pl-1 text-xl font-bold">费用管理</div>
+            <Link href="/invoice/" aria-label="Home">
+              <div className="pl-1 text-xl font-bold">对公支付</div>
             </Link>
             <div className="hidden md:flex md:gap-x-6 border-l md:pl-6">
-              <NavLink href="/expense/">概览</NavLink>
+              <NavLink href="/invoice/">概览</NavLink>
               {/* <NavLink href="/#testimonials">客户评价</NavLink> */}
-              {/* <NavLink href="/expense/pricing">报价</NavLink> */}
+              {/* <NavLink href="/invoice/pricing">报价</NavLink> */}
               {/* <NavLink href="/docs">文档</NavLink> */}
             </div>
           </div>

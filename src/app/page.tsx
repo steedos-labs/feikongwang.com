@@ -7,7 +7,6 @@ import { GlobalFooter } from '@/components/GlobalFooter'
 export default function Home() {
   return (
     <>          
-      <GlobalHeader />
       <main>
         <Hero />
         <Products />
@@ -16,7 +15,6 @@ export default function Home() {
         {/* <Testimonials /> */}
         {/* <Faqs /> */}
       </main>
-      <GlobalFooter/>
     </>
   )
 }
