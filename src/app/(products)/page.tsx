@@ -3,6 +3,7 @@ import { Products } from '@/components/Products'
 import { Hero } from '@/components/Hero'
 import { GlobalFooter } from '@/components/GlobalFooter'
 import PrimaryFeatures from '@/components/PrimaryFeatures'
+import Customers from '@/components/Customers'
 // import { PlatformFeatures } from '@/components/PlatformFeatures'
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
         {/* <Products /> */}
         <PrimaryFeatures />
         {/* <PlatformFeatures /> */}
+        <Customers/>
         <CallToAction />
         {/* <Testimonials /> */}
         {/* <Faqs /> */}

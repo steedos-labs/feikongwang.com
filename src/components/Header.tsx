@@ -21,7 +21,7 @@ import { SignIn } from './Signin';
 const products = [
   { name: '费用报销', description: '差旅、发票、借款和报销', href: '/expense-management', icon: CurrencyYenIcon },
   { name: '支出管理', description: '采购、供应商、收票和应付账款', href: '/spend-management', icon: BoltIcon },
-  { name: '收入管理', description: '销售、客户、开票和应收账款', href: '#', icon: InboxArrowDownIcon },
+  { name: '收入管理', description: '销售、客户、开票和应收账款', href: '/revenue-management', icon: InboxArrowDownIcon },
   { name: '数据分析', description: '项目核算、部门核算、资金核算', href: '#', icon: ChartPieIcon },
   { name: '应用集成', description: '与财务系统、ERP系统、开票系统集成', href: '#', icon: ArrowPathIcon },
   { name: '业务自定义', description: '点亮创意，点燃变革，只需几个点击', href: '#', icon: SquaresPlusIcon },

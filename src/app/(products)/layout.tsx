@@ -33,25 +33,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className={clsx(
-        'h-full scroll-smooth',
-        inter.variable,
-        lexend.variable,
-      )}
-    >
-      <head>
-        <link rel="icon" type="image/png" href="/logo.png"/>
-        <script
-          src="/js/keycloak.js"
-          defer
-        ></script>
-        <script type="text/javascript" id="zsiqchat" src="/js/salesiq.js"></script>
-      </head>
-      <body className="flex h-full flex-col min-h-full bg-white antialiased dark:bg-zinc-900">
-        {children}
-      </body>
-    </html>
+    <>
+      <Header />
+      {children}
+      <GlobalFooter />
+    </>
   )
 }
