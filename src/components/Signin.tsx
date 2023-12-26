@@ -16,7 +16,7 @@ const isAuthenticated = async () => {
   const keycloak = new (window as any).Keycloak({
     url: "https://id.steedos.cn",
     realm: "master",
-    clientId: "steedos-oidc-public",
+    clientId: "feikongwang.com",
   });
   (window as any).keycloak = keycloak;
 

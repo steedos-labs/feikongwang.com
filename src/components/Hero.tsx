@@ -31,7 +31,7 @@ export function Hero() {
       费控王财务收支管理解决方案，借助销售、采购、费用管理等软件，帮助企业更深入地了解收入支出情况，加强支出成本管控，降低成本，提高利润。
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="/register">快速开始</Button>
+        <Button href="/form/demo">预约演示</Button>
         {/* <Button
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           variant="outline"
