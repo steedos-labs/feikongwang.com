@@ -1,11 +1,8 @@
 import { type Metadata } from 'next'
-import { CallToAction } from '@/components/expense/CallToAction'
-import { Faqs } from '@/components/expense/Faqs'
-import { Hero } from '@/components/expense/Hero'
-import { Pricing } from '@/components/Pricing'
-import { PrimaryFeatures } from '@/components/expense/PrimaryFeatures'
-import { SecondaryFeatures } from '@/components/expense/SecondaryFeatures'
-import { Testimonials } from '@/components/expense/Testimonials'
+import { CallToAction } from '@/components/CallToAction'
+import { Hero } from './components/Hero'
+import { PrimaryFeatures } from './components/PrimaryFeatures'
+import { SecondaryFeatures } from './components/SecondaryFeatures'
 
 export const metadata: Metadata = {
   title: '报销管理系统_差旅费管理软件_费用管理软件',
@@ -19,7 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <PrimaryFeatures />
-        <SecondaryFeatures />
+        {/* <SecondaryFeatures /> */}
         <CallToAction />
         {/* <Testimonials /> */}
         {/* <Pricing /> */}

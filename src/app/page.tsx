@@ -1,17 +1,19 @@
 import { CallToAction } from '@/components/CallToAction'
 import { Products } from '@/components/Products'
-import { GlobalHeader } from '@/components/GlobalHeader'
 import { Hero } from '@/components/Hero'
 import { GlobalFooter } from '@/components/GlobalFooter'
+import PrimaryFeatures from '@/components/PrimaryFeatures'
+// import { PlatformFeatures } from '@/components/PlatformFeatures'
 
 export default function Home() {
   return (
     <>          
       <main>
         <Hero />
-        <Products />
-        {/* <SecondaryFeatures /> */}
-        {/* <CallToAction /> */}
+        {/* <Products /> */}
+        <PrimaryFeatures />
+        {/* <PlatformFeatures /> */}
+        <CallToAction />
         {/* <Testimonials /> */}
         {/* <Faqs /> */}
       </main>

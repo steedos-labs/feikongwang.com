@@ -28,7 +28,7 @@ export function Hero() {
         更准确预测和管理现金流
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-      费控王可连接企业所有的开支产生来源，帮助企业高效管理供应商付款及现金流，移动应用版本亦可帮助审批人员精简处理流程。
+      费控王支出管理解决方案，借助采购、差旅和费用管理等软件，帮助企业更深入地了解支出情况，管理所有支出源，加强支出成本管控，降低成本，提高利润。
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
         <Button href="/register">免费试用</Button>

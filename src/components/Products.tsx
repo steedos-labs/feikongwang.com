@@ -9,20 +9,20 @@ import {
 
 const actions = [
   {
-    title: '费用管理',
+    title: '支出管理',
+    href: '/spend',
+    description: '可连接企业所有的开支产生来源，帮助企业高效管理供应商付款及现金流，移动应用版本亦可帮助审批人员精简处理流程。',
+    icon: CheckBadgeIcon,
+    iconForeground: 'text-purple-700',
+    iconBackground: 'bg-purple-50',
+  },
+  {
+    title: '费用报销',
     href: '/expense',
     description: '快速准确的识别各种发票，自动检测重复提交的发票，并对发票的真伪进行验证，有效防止报销过程中的欺诈和错误。',
     icon: ClockIcon,
     iconForeground: 'text-teal-700',
     iconBackground: 'bg-teal-50',
-  },
-  {
-    title: '对公支付',
-    href: '/invoice',
-    description: '可连接企业所有的开支产生来源，帮助企业高效管理供应商付款及现金流，移动应用版本亦可帮助审批人员精简处理流程。',
-    icon: CheckBadgeIcon,
-    iconForeground: 'text-purple-700',
-    iconBackground: 'bg-purple-50',
   },
   // {
   //   title: 'Schedule a one-on-one',

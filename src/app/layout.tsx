@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import '@/styles/tailwind.css'
 import { type Metadata } from 'next'
 import { GlobalFooter } from '@/components/GlobalFooter'
-import { GlobalHeader } from '@/components/GlobalHeader'
+import Header from '@/components/Header'
 
 export const metadata: Metadata = {
   title: {
@@ -50,8 +50,8 @@ export default function RootLayout({
         <script type="text/javascript" id="zsiqchat" src="/js/salesiq.js"></script>
       </head>
       <body className="flex h-full flex-col min-h-full bg-white antialiased dark:bg-zinc-900">
-        <GlobalHeader />
-          {children}
+        <Header />
+        {children}
         <GlobalFooter />
       </body>
     </html>
