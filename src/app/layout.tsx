@@ -42,7 +42,7 @@ export default function RootLayout({
       )}
     >
       <head>
-        <link rel="icon" type="image/png" href="/logo.png"/>
+        <link rel="icon" type="image/svg" href="/logo.svg"/>
         <script
           src="/js/keycloak.js"
           defer
