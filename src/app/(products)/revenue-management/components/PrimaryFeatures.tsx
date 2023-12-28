@@ -1,4 +1,4 @@
-import { CurrencyYenIcon, ChartBarIcon, BuildingOfficeIcon, ArrowPathIcon, CloudArrowUpIcon, LockClosedIcon, DocumentMagnifyingGlassIcon} from '@heroicons/react/20/solid'
+import { CurrencyYenIcon, ChartBarIcon, BuildingOfficeIcon, ArrowPathIcon, CloudArrowUpIcon, LockClosedIcon, DocumentMagnifyingGlassIcon, InboxArrowDownIcon} from '@heroicons/react/20/solid'
 
 const features = [
   {
@@ -41,7 +41,7 @@ const features = [
     description:
       '运用智能算法自动发送催收提醒，提高应收账款回收率。根据客户的支付历史和行为，制定个性化的催收策略，提升效率。',
     href: '#',
-    icon: ChartBarIcon,
+    icon: InboxArrowDownIcon,
   },
 ]
 

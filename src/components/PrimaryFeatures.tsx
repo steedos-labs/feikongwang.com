@@ -1,19 +1,27 @@
-import { CurrencyYenIcon, ChartBarIcon, BuildingOfficeIcon, ArrowPathIcon, CloudArrowUpIcon, LockClosedIcon, DocumentMagnifyingGlassIcon} from '@heroicons/react/20/solid'
+import { ArrowTrendingUpIcon, CurrencyYenIcon, CalculatorIcon, ChartBarIcon, BuildingOfficeIcon, ArrowPathIcon, CloudArrowUpIcon, LockClosedIcon, DocumentMagnifyingGlassIcon, PuzzlePieceIcon, AdjustmentsHorizontalIcon, InboxArrowDownIcon} from '@heroicons/react/20/solid'
+import { ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline'
 
 const features = [
   {
-    name: '供应商管理',
+    name: '收入管理',
     description:
-      '不仅帮助您精选和评估供应商，还提供深入的性能分析和风险管理，确保您的供应链始终高效且稳健。',
+      '您的每一分收入都将被精确追踪与分析。我们提供深度的数据洞察和实时报告，使您能够全面理解并优化收入结构，从而实现财务效率的最大化。',
     href: '#',
-    icon: BuildingOfficeIcon,
+    icon: ArrowTrendingUpIcon,
   },
   {
-    name: '合同管理',
+    name: '支出管理',
     description:
-      '从自动化创建到详细监控，提供了一个全面的解决方案，帮助企业轻松管理复杂合同，同时确保商业活动始终符合法律和合同规定。',
+      '致力于为您提供全面而精确的支出监控。通过先进的分类和分析工具，您可以有效地识别成本节约机会，并实施更为明智的预算管理策略。',
     href: '#',
-    icon: CloudArrowUpIcon,
+    icon: CurrencyYenIcon,
+  },
+  {
+    name: '预算管理',
+    description:
+      '帮助您实现长期和短期的财务目标。通过灵活的预算设置和详细的执行监控，我们的系统确保您的财务规划与业务目标保持一致，促进持续的财务健康。',
+    href: '#',
+    icon: CalculatorIcon,
   },
   {
     name: '智能识票',
@@ -23,25 +31,39 @@ const features = [
     icon: DocumentMagnifyingGlassIcon,
   },
   {
-    name: '差旅和报销管理',
+    name: '智能报销',
     description:
       '一键导入电子发票，体验无纸化报销的同时确保信息完整性、准确性及真实性。避免人为错误及有效降低运营成本，提高企业报销管理效率。',
     href: '#',
-    icon: CurrencyYenIcon,
+    icon: ClipboardDocumentCheckIcon,
   },
   {
-    name: '付款管理',
+    name: '智能催收',
     description:
-      '通过自动化流程，不仅保证及时准确的供应商支付，还帮助您更好地管理企业现金流，从而提升整体财务健康状况。',
+      '运用智能算法自动发送催收提醒，提高应收账款回收率。根据客户的支付历史和行为，制定个性化的催收策略，提升效率。',
     href: '#',
-    icon: ArrowPathIcon,
+    icon: InboxArrowDownIcon,
   },
   {
-    name: '数据分析',
+    name: '智能分析',
     description:
-      '提供实时的成本和收益跟踪，根据费用类别、项目、部门、客户进行多维度的核算，从而支持基于数据的战略决策，提高项目盈利能力。',
+      '利用先进的人工智能技术，我们提供的智能分析工具不仅仅是回顾过去，更是预测未来。结合人工智能和机器学习，我们的系统为您提供洞察力和预测能力，助您做出更加明智和前瞻性的决策。',
     href: '#',
     icon: ChartBarIcon,
+  },
+  {
+    name: '应用集成',
+    description:
+      '费控王支持与各类业务软件的高效集成，包括会计软件、ERP系统等。这种无缝集成不仅提高数据的准确性和一致性，还优化了工作流程，提升整体运营效率。',
+    href: '#',
+    icon: PuzzlePieceIcon,
+  },
+  {
+    name: '业务自定义',
+    description:
+      '我们了解每个企业的独特性，因此提供高度个性化的业务自定义选项。无论是单据格式、数据展示，还是工作流程的自动化，我们都能根据您的具体业务需求定制，确保系统与您的企业战略和操作需求完美契合。',
+    href: '#',
+    icon: AdjustmentsHorizontalIcon,
   },
 ]
 
@@ -50,7 +72,7 @@ export default function Example() {
     <div className="bg-gray-900 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-indigo-400">支出管理</h2>
+          {/* <h2 className="text-base font-semibold leading-7 text-indigo-400">费控王</h2> */}
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
           深入了解 费控王 的解决方案
           </p>
