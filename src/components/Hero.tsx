@@ -25,7 +25,7 @@ export function Hero() {
           </svg>
           <span className="relative">每一笔收支</span>
         </span>{' '}<br/>
-        提高洞察力并节约成本
+        智能分析并预测未来
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
       费控王财务收支管理解决方案，借助收入、支出、预算、分析等管理软件，帮助企业预测未来收支情况，加强支出成本管控，降低成本，提高利润。
