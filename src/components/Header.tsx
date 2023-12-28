@@ -16,6 +16,7 @@ import {
   ArrowTrendingUpIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon,  } from '@heroicons/react/20/solid'
+
 import { Logo } from './Logo';
 import { SignIn } from './Signin';
 
@@ -26,10 +27,6 @@ const products = [
   { name: '数据分析', description: '项目核算、部门核算、资金核算', href: '#', icon: ChartPieIcon },
   { name: '应用集成', description: '与财务系统、ERP系统、开票系统集成', href: '#', icon: ArrowPathIcon },
   { name: '业务自定义', description: '点亮创意，点燃变革，只需几个点击', href: '#', icon: SquaresPlusIcon },
-]
-const callsToAction = [
-  { name: '视频演示', href: '#', icon: PlayCircleIcon },
-  { name: '联系我们', href: '#', icon: PhoneIcon },
 ]
 
 function classNames(...classes:any[]) {
@@ -59,9 +56,9 @@ export default function Header() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 font-semibold leading-6 text-gray-900 focus:ring-0	">
-              产品
-              <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+            <Popover.Button className="inline-flex items-center gap-x-1 font-semibold leading-6 text-gray-900">
+              <span>产品</span>
+              <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
             </Popover.Button>
 
             <Transition
@@ -73,37 +70,33 @@ export default function Header() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-                <div className="p-4">
-                  {products.map((item) => (
-                    <div
-                      key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 leading-6 hover:bg-gray-50"
-                    >
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+              <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+                <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 lg:max-w-3xl">
+                  <div className="grid grid-cols-1 gap-x-6 gap-y-1 p-4 lg:grid-cols-2">
+                    {products.map((item) => (
+                      <div key={item.name} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+                        <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                          <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+                        </div>
+                        <div>
+                          <a href={item.href} className="font-semibold text-gray-900">
+                            {item.name}
+                            <span className="absolute inset-0" />
+                          </a>
+                          <p className="mt-1 text-gray-600">{item.description}</p>
+                        </div>
                       </div>
-                      <div className="flex-auto">
-                        <a href={item.href} className="block font-semibold text-gray-900">
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </a>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
-                      </div>
+                    ))}
+                  </div>
+                  {/* <div className="bg-gray-50 px-8 py-6">
+                    <div className="flex items-center gap-x-3">
+                      <h3 className="text-sm font-semibold leading-6 text-gray-900">Enterprise</h3>
+                      <p className="rounded-full bg-indigo-600/10 px-2.5 py-1.5 text-xs font-semibold text-indigo-600">New</p>
                     </div>
-                  ))}
-                </div>
-                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                  {callsToAction.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                    >
-                      <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-                      {item.name}
-                    </a>
-                  ))}
+                    <p className="mt-2 text-sm leading-6 text-gray-600">
+                      Empower your entire team with even more advanced tools.
+                    </p>
+                  </div> */}
                 </div>
               </Popover.Panel>
             </Transition>

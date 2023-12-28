@@ -3,82 +3,20 @@
 import { useEffect, useState } from "react";
 import { Button } from "./Button";
 
-const Login = async()=> {
-  (window as any).keycloak.login();
-}
-
-
-const Logout = async()=> {
-  (window as any).keycloak.logout();
-}
-
-const isAuthenticated = async () => {
-  const keycloak = new (window as any).Keycloak({
-    url: "https://id.steedos.cn",
-    realm: "master",
-    clientId: "feikongwang.com",
-  });
-  (window as any).keycloak = keycloak;
-
-  const authenticated = await keycloak.init({
-    onLoad: "check-sso",
-    silentCheckSsoRedirectUri:
-      window.location.origin + "/silent-check-sso.html",
-  });
-
-  return authenticated;
-};
-
 export function SignIn() {
-  let [authenticated, setAuthenticated] = useState(false);
-  let [user, setUser] = useState<any>();
-  let [profile, setProfile] = useState<any>();
-
-  useEffect(() => {
-    isAuthenticated().then((authenticated) => {
-      setAuthenticated(authenticated);
-      console.log(authenticated);
-    });
-  }, []);
-  
-  useEffect(() => {
-    if (authenticated) {
-      (window as any).keycloak.loadUserInfo().then((userInfo:any) => {
-        setUser(userInfo);
-      });
-      (window as any).keycloak.loadUserProfile().then((profile:any) => {
-        setProfile(profile);
-      });
-    }
-  }, [authenticated]);
-
   return (
-    <>
-    {!authenticated && (
-      <>
-        <div className="hidden md:block md:pl-8">
-          <a className="inline-block rounded-lg px-2 py-1 text-sm font-semibold text-gray-900  hover:text-gray-700" 
-            onClick={Login}>登录</a>
-        </div>
-        <Button href="/register" color="blue">
-          <span>
-            免费注册
-          </span>
-        </Button>
-      </>
-    )}
-    {user &&(
-      <>
-        <div className="text-sm font-semibold text-gray-900 hover:text-gray-700 lg:pr-4">
-          {user.name}
-        </div>
-        <Button onClick={Logout} color="blue">
-          <span>
-            注销
-          </span>
-        </Button>
-      </>
-    )}
-    </>
+    <div className="flex justify-center gap-x-3">
+      <Button href="/login" color="blue">
+        <svg 
+            aria-hidden="true"
+            className="h-4 w-4 flex-none group-active:fill-current"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clipRule="evenodd" />
+        </svg>
+        <span className="ml-2">
+          登录
+        </span>
+      </Button>
+    </div>
   )
 }

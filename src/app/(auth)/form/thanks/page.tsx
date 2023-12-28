@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
+import { SlimLayout } from '@/components/SlimLayout';
 
 function classNames(...classes:any[]) {
   return classes.filter(Boolean).join(' ')
@@ -12,6 +13,7 @@ export default function Example() {
   const [agreed, setAgreed] = useState(false)
 
   return (
+    <SlimLayout>
     <div className="isolate px-6 py-48 sm:py-64 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">我们已经收到了您提交的表单</h2>
@@ -24,5 +26,6 @@ export default function Example() {
       </p>
 
     </div>
+    </SlimLayout>
   )
 }

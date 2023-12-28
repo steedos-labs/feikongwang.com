@@ -67,20 +67,15 @@ export default function LoginPage() {
   
   return (
     <SlimLayout>
-      <div className="mx-auto">
-        <Link href="/" aria-label="Home">
-          <Logo className="h-10 w-auto" />
-        </Link>
-      </div>
       {authenticated && user && user.name && (
         <>
           <div className="mt-32 mb-10 font-bold text-2xl text-slate-800 mx-auto text-center">欢迎回来，{user.name}</div>
-          <Button type="button" onClick={goApp} variant="solid" color="blue" className="w-full">
+          <Button type="button" href="https://expense.steedos.cn" variant="solid" color="blue" className="w-full">
             <span>
-              访问费控王
+              进入费控王
             </span>
           </Button>
-          <Button type="button" onClick={Logout} variant="solid" color="blue" className="w-full mt-10">
+          <Button type="button" onClick={Logout} variant="outline" className="w-full mt-10">
             <span>
               注销
             </span>

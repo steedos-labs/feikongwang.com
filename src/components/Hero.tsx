@@ -31,19 +31,19 @@ export function Hero() {
       费控王财务收支管理解决方案，借助收入、支出、预算、分析等管理软件，帮助企业预测未来收支情况，加强支出成本管控，降低成本，提高利润。
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="/form/demo">预约演示</Button>
-        {/* <Button
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        <Button href="/register">免费试用</Button>
+        <Button
+          href="/form/demo"
           variant="outline"
         >
           <svg
             aria-hidden="true"
-            className="h-3 w-3 flex-none fill-green-600 group-active:fill-current"
+            className="h-3 w-3 flex-none fill-blue-600 group-active:fill-current"
           >
             <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z" />
           </svg>
-          <span className="ml-3">视频演示</span>
-        </Button> */}
+          <span className="ml-2">预约演示</span>
+        </Button>
       </div>
       <div className="mt-36 lg:mt-44"></div>
       <div className="mt-36 lg:mt-44 hidden">
