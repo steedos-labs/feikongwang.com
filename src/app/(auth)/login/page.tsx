@@ -1,3 +1,5 @@
+"use client";
+
 import Link from 'next/link'
 
 import { Button } from '@/components/Button'
@@ -5,55 +7,101 @@ import { TextField } from '@/components/Fields'
 import { Logo } from '@/components/Logo'
 import { SlimLayout } from '@/components/SlimLayout'
 import { type Metadata } from 'next'
+import { useEffect, useState } from 'react'
 
-export const metadata: Metadata = {
-  title: 'Sign In',
+const Login = async()=> {
+  (window as any).keycloak.login();
 }
 
-export default function Login() {
+
+const Logout = async()=> {
+  (window as any).keycloak.logout();
+}
+
+const Register = async()=> {
+  (window as any).keycloak.register();
+}
+
+const goApp = async()=> {
+}
+
+const isAuthenticated = async () => {
+  const keycloak = new (window as any).Keycloak({
+    url: "https://id.steedos.cn",
+    realm: "master",
+    clientId: "feikongwang.com",
+  });
+  (window as any).keycloak = keycloak;
+
+  const authenticated = await keycloak.init({
+    onLoad: "check-sso",
+    silentCheckSsoRedirectUri:
+      window.location.origin + "/silent-check-sso.html",
+  });
+
+  return authenticated;
+};
+
+export default function LoginPage() {
+  let [authenticated, setAuthenticated] = useState(false);
+  let [user, setUser] = useState<any>();
+  let [profile, setProfile] = useState<any>();
+
+  useEffect(() => {
+    isAuthenticated().then((authenticated) => {
+      setAuthenticated(authenticated);
+      console.log(authenticated);
+    });
+  }, []);
+  
+  useEffect(() => {
+    if (authenticated) {
+      (window as any).keycloak.loadUserInfo().then((userInfo:any) => {
+        setUser(userInfo);
+      });
+      (window as any).keycloak.loadUserProfile().then((profile:any) => {
+        setProfile(profile);
+      });
+    }
+  }, [authenticated]);
+  
   return (
     <SlimLayout>
-      <div className="flex">
+      <div className="mx-auto">
         <Link href="/" aria-label="Home">
           <Logo className="h-10 w-auto" />
         </Link>
       </div>
-      <h2 className="mt-20 text-lg font-semibold text-gray-900">
-        Sign in to your account
-      </h2>
-      <p className="mt-2 text-sm text-gray-700">
-        Don’t have an account?{' '}
-        <Link
-          href="/register"
-          className="font-medium text-blue-600 hover:underline"
-        >
-          Sign up
-        </Link>{' '}
-        for a free trial.
-      </p>
-      <form action="#" className="mt-10 grid grid-cols-1 gap-y-8">
-        <TextField
-          label="Email address"
-          name="email"
-          type="email"
-          autoComplete="email"
-          required
-        />
-        <TextField
-          label="Password"
-          name="password"
-          type="password"
-          autoComplete="current-password"
-          required
-        />
-        <div>
-          <Button type="submit" variant="solid" color="blue" className="w-full">
+      {authenticated && user && user.name && (
+        <>
+          <div className="mt-32 mb-10 font-bold text-2xl text-slate-800 mx-auto text-center">欢迎回来，{user.name}</div>
+          <Button type="button" onClick={goApp} variant="solid" color="blue" className="w-full">
             <span>
-              Sign in <span aria-hidden="true">&rarr;</span>
+              访问费控王
             </span>
           </Button>
-        </div>
-      </form>
+          <Button type="button" onClick={Logout} variant="solid" color="blue" className="w-full mt-10">
+            <span>
+              注销
+            </span>
+          </Button>
+        </>
+      )}
+      {!user && (
+        <>
+          <div className="mt-32 mb-10 font-bold text-2xl text-slate-800 mx-auto text-center">快速开始</div>
+          <Button type="button" onClick={Login} variant="solid" color="blue" className="w-full">
+            <span>
+              登录
+            </span>
+          </Button>
+          <Button type="button" onClick={Register} variant="solid" color="blue" className="w-full mt-10">
+            <span>
+              注册
+            </span>
+          </Button>
+        </>
+      )}
     </SlimLayout>
   )
 }
