@@ -135,7 +135,7 @@ export function Pricing() {
           <Plan
             name="免费版"
             price="0"
-            description="帮助财务人员管理费用。"
+            description="帮助小型团队和财务部门管理费用。"
             href="/register"
             features={[
               '最多5个用户',
