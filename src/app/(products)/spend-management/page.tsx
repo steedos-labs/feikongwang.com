@@ -4,6 +4,7 @@ import { CallToAction } from '@/components/CallToAction'
 import { Hero } from './components/Hero'
 import PrimaryFeatures from './components/PrimaryFeatures'
 import { SecondaryFeatures } from './components/SecondaryFeatures'
+import Customers from '@/components/Customers'
 
 export const metadata: Metadata = {
   title: '企业支出管理解决方案丨成本管理 | 费用管理',
@@ -18,6 +19,7 @@ export default function Invoice() {
         <Hero />
         <PrimaryFeatures />
         {/* <SecondaryFeatures /> */}
+        <Customers/>
         <CallToAction />
       </main>
     </>

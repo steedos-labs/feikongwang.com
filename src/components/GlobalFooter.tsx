@@ -23,9 +23,9 @@ export function GlobalFooter() {
               </svg>
             </Link> */}
             <Link
-              href="https://github.com/steedos"
+              href="https://github.com/steedos-labs/feikongwang"
               className="group"
-              aria-label="Steedos on GitHub"
+              aria-label="费控王开源项目"
             >
               <svg
                 aria-hidden="true"

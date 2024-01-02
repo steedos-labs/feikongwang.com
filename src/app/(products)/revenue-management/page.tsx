@@ -3,6 +3,7 @@ import { type Metadata } from 'next'
 import { CallToAction } from '@/components/CallToAction'
 import { Hero } from './components/Hero'
 import PrimaryFeatures from './components/PrimaryFeatures'
+import Customers from '@/components/Customers'
 
 export const metadata: Metadata = {
   title: '企业支出管理解决方案丨成本管理 | 收入管理',
@@ -16,6 +17,7 @@ export default function RevenueManagement() {
       <main>
         <Hero />
         <PrimaryFeatures />
+        <Customers/>
         <CallToAction />
       </main>
     </>

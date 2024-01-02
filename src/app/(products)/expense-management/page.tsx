@@ -3,6 +3,7 @@ import { CallToAction } from '@/components/CallToAction'
 import { Hero } from './components/Hero'
 import { PrimaryFeatures } from './components/PrimaryFeatures'
 import { SecondaryFeatures } from './components/SecondaryFeatures'
+import Customers from '@/components/Customers'
 
 export const metadata: Metadata = {
   title: '报销管理系统_差旅费管理软件_费用管理软件',
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <PrimaryFeatures />
         {/* <SecondaryFeatures /> */}
+        <Customers/>
         <CallToAction />
         {/* <Testimonials /> */}
         {/* <Pricing /> */}
