@@ -70,7 +70,7 @@ export default function LoginPage() {
       {authenticated && user && user.name && (
         <>
           <div className="mt-32 mb-10 font-bold text-2xl text-slate-800 mx-auto text-center">欢迎回来，{user.name}</div>
-          <Button type="button" href="https://expense.steedos.cn" variant="solid" color="blue" className="w-full">
+          <Button type="button" href="https://feikongwang.steedos.cn" variant="solid" color="blue" className="w-full">
             <span>
               进入费控王
             </span>
