@@ -1,9 +1,9 @@
-"use client";
-
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Customers from '@/components/Customers';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '关于我们',
+}
 
 const stats = [
   { label: '华炎网络成立于2006年', value: '18年历练' },
@@ -53,7 +53,6 @@ const team = [
 ]
 
 export default function Example() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <div className="">

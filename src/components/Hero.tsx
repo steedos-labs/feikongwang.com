@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <Container className="pb-16 pt-20 text-center lg:pt-32 ">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl leading-tight sm:leading-tight">
-      精确掌控{' '}
+      精准掌握{' '}
         <span className="relative whitespace-nowrap text-blue-600">
           <svg
             aria-hidden="true"
